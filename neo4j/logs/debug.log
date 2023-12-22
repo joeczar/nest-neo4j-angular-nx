@@ -590,3 +590,9 @@
 2023-12-22 20:53:20.926+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] id: 5D23438AB0F03A38968D53E18AC40F00EA8FA693ABB098068D70DC3887114923
 2023-12-22 20:53:20.931+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] name: system
 2023-12-22 20:53:20.934+0000 INFO  [o.n.g.f.DatabaseManagementServiceFactory] creationDate: 2023-12-22T20:53:18.514Z
+2023-12-22 21:15:49.872+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j/51a23ab6] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 3 checkpoint started...
+2023-12-22 21:15:50.036+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j/51a23ab6] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 3 checkpoint completed in 140ms. Checkpoint flushed 74 pages (0% of total available pages), in 57 IOs. Checkpoint performed with IO limit: unlimited, paused in total 0 times( 0 millis).
+2023-12-22 21:15:50.038+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] [neo4j/51a23ab6] No log version pruned. The strategy used was '104857600 size'. 
+2023-12-22 21:20:59.142+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [system/00000000] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 36 checkpoint started...
+2023-12-22 21:20:59.362+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] [system/00000000] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 36 checkpoint completed in 200ms. Checkpoint flushed 103 pages (0% of total available pages), in 86 IOs. Checkpoint performed with IO limit: unlimited, paused in total 0 times( 0 millis).
+2023-12-22 21:20:59.363+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] [system/00000000] No log version pruned. The strategy used was '104857600 size'. 
