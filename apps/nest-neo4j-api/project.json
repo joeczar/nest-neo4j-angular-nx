@@ -1,0 +1,61 @@
+{
+  "name": "nest-neo4j-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nest-neo4j-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/nest-neo4j-api",
+        "main": "apps/nest-neo4j-api/src/main.ts",
+        "tsConfig": "apps/nest-neo4j-api/tsconfig.app.json",
+        "assets": [
+          "apps/nest-neo4j-api/src/assets"
+        ],
+        "webpackConfig": "apps/nest-neo4j-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nest-neo4j-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nest-neo4j-api:build:development"
+        },
+        "production": {
+          "buildTarget": "nest-neo4j-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/nest-neo4j-api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
